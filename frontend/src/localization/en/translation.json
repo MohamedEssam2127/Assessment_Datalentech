@@ -1,0 +1,74 @@
+{
+  "appName": "Industrial Equipment Inspection System",
+  "tagline": "Reliable warehouse equipment inspections with offline persistence",
+  "nav": {
+    "inspect": "Inspection Form",
+    "reports": "Saved Reports"
+  },
+  "status": {
+    "saving": "Submitting report to warehouse server...",
+    "savedSuccess": "Report successfully saved!",
+    "savedAlready": "Report verified (Duplicate prevented by Idempotency Key)",
+    "submitFailed": "Network or server failure occurred",
+    "submitFailedTip": "Warehouse Wi-Fi or server dropped. Click Retry to safely resend without duplicates.",
+    "draftSaved": "Draft saved locally",
+    "draftRestored": "Restored unsaved draft from your previous session"
+  },
+  "form": {
+    "version": "Version",
+    "submitButton": "Submit Inspection Report",
+    "retryButton": "Retry Safe Submission",
+    "resetDraft": "Discard Draft & Start New",
+    "confirmReset": "Are you sure you want to discard this unsaved draft?",
+    "validationSummary": "Please resolve errors before submitting",
+    "validation": {
+      "required": "This field is required",
+      "min": "Value cannot be less than {{min}}",
+      "max": "Value cannot exceed {{max}}",
+      "invalidDate": "Please select a valid date"
+    },
+    "selectPlaceholder": "Select an option...",
+    "notesPlaceholder": "Provide specific notes on the observed defect or damage...",
+    "inspectionDateHint": "Date the equipment was examined on-site",
+    "hiddenFieldNotice": "Condition is OK - damage notes field is hidden and will not be sent."
+  },
+  "reports": {
+    "title": "Inspection Reports Archive",
+    "subtitle": "Review all persisted reports and verify idempotent duplicate prevention",
+    "totalCount": "Total Persisted Reports",
+    "uniqueKeys": "Unique Idempotency Keys",
+    "refresh": "Refresh List",
+    "searchPlaceholder": "Search by serial, condition, or report ID...",
+    "filterAll": "All Conditions",
+    "filterOk": "OK Only",
+    "filterDamaged": "Damaged Only",
+    "empty": "No inspection reports found yet. Submit one from the inspection form!",
+    "table": {
+      "id": "Report ID",
+      "equipment": "Equipment",
+      "serial": "Serial / Tag",
+      "condition": "Condition",
+      "date": "Inspected Date",
+      "idempotencyKey": "Idempotency Key",
+      "actions": "Details"
+    },
+    "viewDetails": "View Payload",
+    "detailsModalTitle": "Report Details & Server Verification"
+  },
+  "common": {
+    "close": "Close",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "loading": "Loading...",
+    "language": "Language",
+    "arabic": "العربية",
+    "english": "English",
+    "ok": "OK",
+    "damaged": "Damaged"
+  },
+  "errors": {
+    "timeout": "Request timed out. Please check your connection.",
+    "network": "Network error. The server may be unreachable.",
+    "server": "A server error occurred. Please try again."
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "id": "forklift-check",
+  "version": 3,
+  "title": {
+    "en": "Forklift Inspection",
+    "ar": "فحص الرافعة الشوكية"
+  },
+  "fields": [
+    {
+      "key": "serial",
+      "type": "text",
+      "required": true,
+      "label": {
+        "en": "Serial number",
+        "ar": "الرقم التسلسلي"
+      }
+    },
+    {
+      "key": "hours",
+      "type": "number",
+      "required": true,
+      "min": 0,
+      "max": 50000,
+      "label": {
+        "en": "Operating hours",
+        "ar": "ساعات التشغيل"
+      }
+    },
+    {
+      "key": "condition",
+      "type": "select",
+      "required": true,
+      "options": [
+        {
+          "value": "ok",
+          "label": {
+            "en": "OK",
+            "ar": "سليم"
+          }
+        },
+        {
+          "value": "damaged",
+          "label": {
+            "en": "Damaged",
+            "ar": "تالف"
+          }
+        }
+      ],
+      "label": {
+        "en": "Condition",
+        "ar": "الحالة"
+      }
+    },
+    {
+      "key": "damageNotes",
+      "type": "textarea",
+      "required": true,
+      "showIf": {
+        "field": "condition",
+        "equals": "damaged"
+      },
+      "label": {
+        "en": "Describe the damage",
+        "ar": "صف التلف"
+      }
+    },
+    {
+      "key": "inspectedOn",
+      "type": "date",
+      "required": true,
+      "label": {
+        "en": "Inspection date",
+        "ar": "تاريخ الفحص"
+      }
+    }
+  ]
+}
