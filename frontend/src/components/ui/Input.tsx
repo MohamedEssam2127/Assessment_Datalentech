@@ -1,0 +1,38 @@
+import React from 'react';
+
+export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  label?: string;
+  error?: string;
+}
+
+export const Input: React.FC<InputProps> = ({
+  label,
+  error,
+  id,
+  required,
+  className = '',
+  ...props
+}) => {
+  const inputId = id || (label ? `input-${label}` : undefined);
+
+  return (
+    <div className="w-full">
+      {label && (
+        <label htmlFor={inputId} className="block text-xs font-semibold text-[#1F2429] mb-1.5">
+          {label} {required && <span className="text-[#8B1E2D]">*</span>}
+        </label>
+      )}
+      <input
+        id={inputId}
+        required={required}
+        className={`w-full rounded-xl border px-3.5 py-2.5 text-sm bg-white text-[#1F2429] outline-none transition-all ${
+          error
+            ? 'border-red-500 ring-2 ring-red-200'
+            : 'border-slate-200 focus:ring-2 focus:ring-[#8B1E2D]/15'
+        } ${className}`}
+        {...props}
+      />
+      {error && <p className="mt-1.5 text-xs text-red-600 font-medium">{error}</p>}
+    </div>
+  );
+};
